@@ -7,9 +7,10 @@ class AdmireController extends ControllerBase {
 
     public function content() {
         return [
-            'admire/custom' => [
-                'title' => 'Список мероприятий',
-                'page callback' =>
+            'title' => 'Список мероприятий',
+            'raw_markup' => [
+                '#type' => 'markup',
+                '#markup' =>
 '<table class="table">
   <thead>
     <tr>
