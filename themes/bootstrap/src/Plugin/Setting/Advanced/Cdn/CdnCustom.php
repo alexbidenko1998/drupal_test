@@ -73,6 +73,7 @@ class CdnCustom extends CdnProviderBase {
       'https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css',
       'https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.js',
       'https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'
     ]);
   }
 
