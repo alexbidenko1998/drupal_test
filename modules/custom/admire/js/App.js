@@ -1,6 +1,7 @@
 const App = new Vue({
     el: '#App',
     data: {
+        sorting: 'id',
         events: []
     },
     created() {
@@ -9,5 +10,13 @@ const App = new Vue({
             .then(data => {
                 this.events = data;
             });
+    },
+    computed: {
+        filteredEvents() {
+            return this.events.sort(a, b => {
+                if(a[this.sortin] > b[this.sortin]) return 1;
+                else return -1;
+            });
+        }
     }
 });
