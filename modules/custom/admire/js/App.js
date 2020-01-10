@@ -1,6 +1,8 @@
 const App = new Vue({
     el: '#App',
     data: {
+        label: 'label',
+
         sorting: 'id',
         filterName: '',
         events: []
