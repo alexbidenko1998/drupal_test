@@ -13,7 +13,7 @@
 
 # user list page
 hockey_page.user_list:
-  path: 'events/list'
+  path: '/events/list'
   defaults:
     _title: 'Список мероприятий'
     _controller: 'Drupal\events\Controller\EventsController::content'

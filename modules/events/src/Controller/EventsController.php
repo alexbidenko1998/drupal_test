@@ -4,7 +4,7 @@ namespace Drupal\events\Controller;
 
 class EventsController {
 
-    function content() {
+    public function content() {
         return '<table class="table">
   <thead>
     <tr>
