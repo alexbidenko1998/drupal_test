@@ -1,0 +1,34 @@
+block.settings.countdown_config:
+  type: block_settings
+  label: 'Countdown settings'
+  mapping:
+    countdown_datetime-1:
+      type: text
+      label: 'Timer date'
+    countdown_datetime-2:
+      type: text
+      label: 'Timer date'
+    countdown_datetime-3:
+      type: text
+      label: 'Timer date'
+    countdown_datetime-4:
+      type: text
+      label: 'Timer date'
+    countdown_datetime-5:
+      type: text
+      label: 'Timer date'
+    countdown_datetime-6:
+      type: text
+      label: 'Timer date'
+    countdown_datetime-7:
+      type: text
+      label: 'Timer date'
+    countdown_datetime-8:
+      type: text
+      label: 'Timer date'
+    countdown_datetime-9:
+      type: text
+      label: 'Timer date'
+    font_size:
+      type: text
+      label: 'Font size'

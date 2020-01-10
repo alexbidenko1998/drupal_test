@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_theme().
+
+function kwg_page_theme() {
+  return array(
+    'kwg_page_app_user_list' => array( // Название темы
+      'variables' => array( // Массив названия перменных
+        'data' => array(),
+      ),
+      // Путь к шаблону без .html.twig в котором и будут доступны перменные что указаны выше
+      'templates' => 'templates/kwg-page-app-user-list',
+    ),
+
+    'kwg_page_app_user_view' => array( // Название темы
+      'variables' => array( // Массив названия перменных
+        'data' => array(),
+      ),
+      // Путь к шаблону без .html.twig в котором и будут доступны перменные что указаны выше
+      'templates' => 'templates/kwg-page-app-user-view',
+    ),
+  );
+}
+ */

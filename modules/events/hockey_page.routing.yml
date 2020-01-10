@@ -1,0 +1,21 @@
+#Название роутинга, его используют для генерации ссылок, редирект и так далее.
+# api_test.add_record:
+#   #Путь который будет на сайте.
+#   path: '/admin/mypage/add_record'
+#   defaults:
+#   #Заголовок страницы
+#     _title: 'Add record'
+#     #Отображение на странице формы. Аналог drupal_get_form
+#     _form: '\Drupal\mypage\Form\ConfigFormMyPage'
+#   requirements:
+#   #Права
+#     _permission: 'access simple page'
+
+# user list page
+hockey_page.user_list:
+  path: 'events/list'
+  defaults:
+    _title: 'Список мероприятий'
+    _controller: '\Drupal\events\Controller\EventsController::content'
+  requirements:
+    _permission: 'access content'

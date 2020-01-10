@@ -1,0 +1,79 @@
+# библиотека для отображения json
+json-viewer:
+  version: 1.x
+  css:
+    theme:
+      js/json-viewer/jquery.json-viewer.css: {}
+  js:
+    js/json-viewer/jquery.json-viewer.js: {}
+  dependencies:
+    - core/jquery
+
+settingJsonInfo:
+  version: 1.x
+  js:
+    js/setting_json_info.js: {}
+  dependencies:
+    - core/jquery
+    - sofa_page/json-viewer
+
+datepicker:
+  version: 1.x
+  css:
+    theme:
+      js/air-datepicker/datepicker.min.css: {}
+  js:
+    js/air-datepicker/datepicker.min.js: {}
+  dependencies:
+    - core/jquery
+
+mapInfo:
+  version: 1.x
+  css:
+    theme:
+      js/mapInfo/mapInfo.css: {}
+  js:
+    https://maps.googleapis.com/maps/api/js?key=AIzaSyCGVUC_CNaXhfejcJVfPCVUctR20gzvToE: {external: true, defer: true, async: true}
+    js/mapInfo/mapInfo.js: {}
+  dependencies:
+    - core/jquery
+
+highchartsCore:
+  version: 1.x
+  js:
+    js/highcharts/highcharts.js: {}
+    js/highcharts/modules/data.js: {}
+    js/highcharts/modules/drilldown.js: {}
+
+statistic:
+  version: 1.x
+  js:
+    js/statistic.js: {}
+  dependencies:
+    - core/jquery
+    - sofa_page/datepicker
+    - sofa_page/highchartsCore
+
+scrollmenu:
+  version: 1.x
+  css:
+    theme:
+      js/scroll/scrollpane.css: {}
+  js:
+    js/scroll/scroll.js: {}
+  dependencies:
+    - core/jquery
+
+countdown.timer:
+  version: 1.x
+  css:
+    component:
+      css/jquery_countdown_timer.css: {}
+  js:
+    js/jquery_countdown_timer.js: {}
+    js/jquery_countdown_timer_init.js: {}
+  dependencies:
+  - core/jquery
+  - core/drupal
+  - core/drupalSettings
+  - core/jquery.once

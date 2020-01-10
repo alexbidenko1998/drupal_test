@@ -1,0 +1,83 @@
+sofa permission:
+  title: 'sofas pages'
+  restrict access: true
+
+distributors.create:
+  title: 'distributors.create'
+  restrict access: true
+  
+distributors.admin:
+  title: 'distributors:admin'
+  restrict access: true
+  
+distributors.read:
+  title: 'distributors:read'
+  restrict access: true
+  
+distributors.update:
+  title: 'distributors:update'
+  restrict access: true
+  
+users.create:
+  title: 'users.create'
+  restrict access: true
+  
+users.delete:
+  title: 'users:delete'
+  restrict access: true
+  
+users.update:
+  title: 'users.update'
+  restrict access: true
+  
+users.update.password:
+  title: 'users:update.password'
+  restrict access: true
+  
+users.read:
+  title: 'users:read'
+  restrict access: true
+  
+users.roles.write:
+  title: 'users.roles.write'
+  restrict access: true
+  
+sofas.create:
+  title: 'sofas.create'
+  restrict access: true
+  
+sofas.delete:
+  title: 'sofas.delete'
+  restrict access: true
+  
+sofas.enable:
+  title: 'sofas.enable'
+  restrict access: true
+  
+sofas.admin:
+  title: 'sofas:admin'
+  restrict access: true
+  
+sofas.update:
+  title: 'sofas:update'
+  restrict access: true
+  
+fabrics.write:
+  title: 'fabrics.write'
+  restrict access: true
+  
+fabrics.delete:
+  title: 'fabrics.delete'
+  restrict access: true
+  
+fabrics.enable:
+  title: 'fabrics.enable'
+  restrict access: true
+  
+fabrics.admin:
+  title: 'fabrics:admin'
+  restrict access: true
+  
+fabrics.update:
+  title: 'fabrics:update'
+  restrict access: true

@@ -1,0 +1,5 @@
+name: Hockey pages
+description: 'Show admire events'
+package: Custom
+type: module
+core: 8.x
