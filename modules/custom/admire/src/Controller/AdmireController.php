@@ -12,8 +12,6 @@ class AdmireController extends ControllerBase {
                 '#type' => 'markup',
                 '#markup' =>
 '
-<script type="text/javascript" src="https://cdn:jsdelivr:net/npm/vue@2:6:11"></script>
-
 <div id="App">
     <table class="table">
       <thead>
@@ -34,6 +32,18 @@ class AdmireController extends ControllerBase {
       </tbody>
     </table>
 </div>
+
+<script type="text/javascript">
+alert();
+document.addEventListener(\'load\', () => {
+    const App = new Vue({
+        el: \'#App\',
+        data: {
+            events: [1, 2, 3]
+        }
+    });
+});
+</script>
 '
             ]
         ];
