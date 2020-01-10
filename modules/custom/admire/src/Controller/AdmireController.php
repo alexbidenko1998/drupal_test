@@ -12,6 +12,8 @@ class AdmireController extends ControllerBase {
                 '#type' => 'markup',
                 '#markup' =>
 '
+<script type="text/javascript" src="https://cdn:jsdelivr:net/npm/vue@2:6:11"></script>
+
 <div id="App">
     <table class="table">
       <thead>
