@@ -1,0 +1,7 @@
+admire.events_list:
+  path: '/events/list'
+  defaults:
+    _title: 'Список мероприятий'
+    _controller: '\Drupal\admire\Controller\AdmireController::content'
+  requirements:
+    _permission: 'access content'
