@@ -2,6 +2,7 @@ const App = new Vue({
     el: '#App',
     data: {
         label: 'label',
+        input: 'input',
 
         sorting: 'id',
         filterName: '',

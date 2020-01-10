@@ -18,13 +18,13 @@ class AdmireController extends ControllerBase {
             <div class="col-4">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                   <label class="btn btn-secondary active">
-                    <input type="radio" name="options" value="id" id="option1" v-model="sorting"> Id
+                    <img :is="input" type="radio" name="options" value="id" id="option1" v-model="sorting"> Id
                   </label>
                   <label class="btn btn-secondary">
-                    <input type="radio" name="options" value="name" id="option2" v-model="sorting"> Name
+                    <img :is="input" type="radio" name="options" value="name" id="option2" v-model="sorting"> Name
                   </label>
                   <label class="btn btn-secondary">
-                    <input type="radio" name="options" value="description" id="option3" v-model="sorting"> Description
+                    <img :is="input" type="radio" name="options" value="description" id="option3" v-model="sorting"> Description
                   </label>
                 </div>
             </div>
@@ -32,7 +32,7 @@ class AdmireController extends ControllerBase {
                 <div class="form-group row">
                     <p :is="label" for="inputEmail3" class="col-sm-2 col-form-label" v-model="filterName">Name</p>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail3">
+                      <img :is="input" type="email" class="form-control" id="inputEmail3">
                     </div>
                 </div>
             </div>
