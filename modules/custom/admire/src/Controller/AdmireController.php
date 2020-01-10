@@ -11,7 +11,7 @@ class AdmireController extends ControllerBase {
             'raw_markup' => [
                 '#type' => 'markup',
                 '#markup' =>
-'
+`
 <div id="App">
     <div class="container-fluid">
         <div class="row">
@@ -30,7 +30,7 @@ class AdmireController extends ControllerBase {
             </div>
             <div class="col-8">
                 <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label" v-model="filterName">Name</label>
+                    <p :is="'label'" for="inputEmail3" class="col-sm-2 col-form-label" v-model="filterName">Name</p>
                     <div class="col-sm-10">
                       <input type="email" class="form-control" id="inputEmail3">
                     </div>
@@ -58,7 +58,7 @@ class AdmireController extends ControllerBase {
       </tbody>
     </table>
 </div>
-',
+`,
             ],
             '#attached' => [
                 'library' => [
