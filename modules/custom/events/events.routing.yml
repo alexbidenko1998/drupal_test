@@ -12,7 +12,7 @@
 #     _permission: 'access simple page'
 
 # user list page
-events:
+events.list:
   path: '/events/list'
   defaults:
     _title: 'Список мероприятий'
