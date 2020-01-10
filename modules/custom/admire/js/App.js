@@ -17,7 +17,7 @@ const App = new Vue({
             return this.events.filter(el => {
                 return el.name.indexOf(this.filterName) > -1;
             }).sort((a, b) => {
-                if(a[this.sortin] > b[this.sortin]) return 1;
+                if(a[this.sorting] > b[this.sorting]) return 1;
                 else return -1;
             });
         }

@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ *   Contains install and update functions for bootstrap4 theme.
+ */
+
+/**
+ * Updates library to the latest built-in version of Bootstrap unless no version was selected.
+ */
+function bootstrap4_update_8100() {
+  $config = \Drupal::configFactory()
+    ->getEditable('bootstrap4.settings');
+
+  $configValue = '4.3.1';
+  $configCdnVariable = 'b4_cdn_version_';
+  $configLibVariable = 'b4_lib_version_';
+  $configVariants = ['css', 'js'];
+
+  foreach ($configVariants as $configVariant) {
+    $config
+      ->set($configLibVariable . $configVariant, ($config->get($configCdnVariable . $configVariant) !== '0') ? $configValue : '0')
+      ->clear($configCdnVariable . $configVariant);
+  }
+
+  $config->save();
+}
