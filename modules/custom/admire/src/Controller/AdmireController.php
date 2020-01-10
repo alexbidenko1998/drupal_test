@@ -9,7 +9,8 @@ class AdmireController extends ControllerBase {
         $form['search'] = array(
             '#type' => 'textfield',
             '#title' => 'Имя',
-            '#name' => 'filterName'
+            '#name' => 'filterName',
+            '#attributes' => array('v-model' => 'filterName')
         );
         return $form;
         return [
