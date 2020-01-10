@@ -1,0 +1,229 @@
+#Название роутинга, его используют для генерации ссылок, редирект и так далее.
+# api_test.add_record:
+#   #Путь который будет на сайте.
+#   path: '/admin/mypage/add_record'
+#   defaults:
+#   #Заголовок страницы
+#     _title: 'Add record'
+#     #Отображение на странице формы. Аналог drupal_get_form
+#     _form: '\Drupal\mypage\Form\ConfigFormMyPage'
+#   requirements:
+#   #Права
+#     _permission: 'access simple page'
+
+# user list page
+hockey_page.user_list:
+  path: 'user/list'
+  defaults:
+    _title: 'Список пользователей'
+    _controller: '\Drupal\hockey_page\Controller\UserList::content'
+  requirements:
+    _permission: 'hockey permission'
+
+# user info
+hockey_page.user__id__info:
+  path: 'user/{userId}/info'
+  defaults:
+    _title: 'Информация'
+    _controller: '\Drupal\hockey_page\Controller\UserInfo::content'
+  requirements:
+    _permission: 'hockey permission'
+
+hockey_page.user__id__add:
+  path: 'user/{userId}/add'
+  defaults:
+    _title: 'Деньги, Токены, Опыт'
+    _controller: '\Drupal\hockey_page\Controller\UserAdd::content'
+  requirements:
+    _permission: 'hockey permission'
+
+hockey_page.user__id__add__item:
+  path: 'user/{userId}/add_item'
+  defaults:
+    _title: 'Разблокировка товаров'
+    _form: '\Drupal\hockey_page\Form\UserAddItem'
+  requirements:
+    _permission: 'hockey permission'
+
+hockey_page.user__id__add__player:
+  path: 'user/{userId}/add_player'
+  defaults:
+    _title: 'Добавление игрока'
+    _form: '\Drupal\hockey_page\Form\UserAddPlayer'
+  requirements:
+    _permission: 'hockey permission'
+
+crypto_page.user_change_name:
+  path: 'player/{playerId}/changeName'
+  defaults:
+    _title: 'Смена имени'
+    _controller: '\Drupal\hockey_page\Controller\UserChangeName::content'
+  requirements:
+    _permission: 'hockey permission'
+
+# legendary player r list page
+hockey_page.legendary_player_r_list:
+  path: 'legendaryplayerr/list'
+  defaults:
+    _title: 'Список легендарных хоккеистов R'
+    _controller: '\Drupal\hockey_page\Controller\LegendaryPlayerList::content'
+  requirements:
+    _permission: 'hockey permission'
+
+# legendary player r add
+hockey_page.legendary_player_r_add:
+  path: 'legendaryplayerr/add'
+  defaults:
+    _title: 'Добавить легендарного хоккеиста R'
+    _form: '\Drupal\hockey_page\Form\LegendaryPlayerAdd'
+  requirements:
+    _permission: 'hockey permission'
+
+# legendary player r edit
+hockey_page.legendary_player_r_edit:
+  path: 'legendaryplayerr/{playerId}/edit'
+  defaults:
+    _title: 'Редактировать легендарного хоккеиста R'
+    _form: '\Drupal\hockey_page\Form\LegendaryPlayerEdit'
+  requirements:
+    _permission: 'hockey permission'
+
+# legendary player t list page
+hockey_page.legendary_player_t_list:
+  path: 'legendaryplayert/list'
+  defaults:
+    _title: 'Список легендарных хоккеистов T'
+    _controller: '\Drupal\hockey_page\Controller\LegendaryPlayerTList::content'
+  requirements:
+    _permission: 'hockey permission'
+
+# legendary player t add
+hockey_page.legendary_player_t_add:
+  path: 'legendaryplayert/add'
+  defaults:
+    _title: 'Добавить легендарного хоккеиста T'
+    _form: '\Drupal\hockey_page\Form\LegendaryPlayerTAdd'
+  requirements:
+    _permission: 'hockey permission'
+
+# legendary player t edit
+hockey_page.legendary_player_t_edit:
+  path: 'legendaryplayert/{playerId}/edit'
+  defaults:
+    _title: 'Редактировать легендарного хоккеиста T'
+    _form: '\Drupal\hockey_page\Form\LegendaryPlayerTEdit'
+  requirements:
+    _permission: 'hockey permission'
+
+# legendary trainer list page
+hockey_page.legendary_trainer_list:
+  path: 'legendarytrainer/list'
+  defaults:
+    _title: 'Список легендарных тренеров'
+    _controller: '\Drupal\hockey_page\Controller\LegendaryTrainerList::content'
+  requirements:
+    _permission: 'hockey permission'
+
+# legendary trainer add
+hockey_page.legendary_trainer_add:
+  path: 'legendarytrainer/add'
+  defaults:
+    _title: 'Добавить легендарного тренера'
+    _form: '\Drupal\hockey_page\Form\LegendaryTrainerAdd'
+  requirements:
+    _permission: 'hockey permission'
+
+# legendary trainer edit
+hockey_page.legendary_trainer_edit:
+  path: 'legendarytrainer/{trainerId}/edit'
+  defaults:
+    _title: 'Редактировать легендарного тренера'
+    _form: '\Drupal\hockey_page\Form\LegendaryTrainerEdit'
+  requirements:
+    _permission: 'hockey permission'
+
+hockey_page.kit_statistic:
+  path: 'kit/statistic'
+  defaults:
+    _title: 'Статистика'
+    _form: '\Drupal\hockey_page\Form\KitStatistic'
+  requirements:
+    _permission: 'hockey permission'
+
+# player list page
+hockey_page.player_list:
+  path: 'player/list'
+  defaults:
+    _title: 'Список хоккеистов'
+    _controller: '\Drupal\hockey_page\Controller\PlayerList::content'
+  requirements:
+    _permission: 'hockey full permission'
+
+# player info
+hockey_page.player__id__info:
+  path: 'player/{playerId}/info'
+  defaults:
+    _title: 'Информация'
+    _controller: '\Drupal\hockey_page\Controller\PlayerInfo::content'
+  requirements:
+    _permission: 'hockey full permission'
+
+# tournament list page
+hockey_page.tournament_list:
+  path: 'tournament/list'
+  defaults:
+    _title: 'Список турниров'
+    _controller: '\Drupal\hockey_page\Controller\TournamentList::content'
+  requirements:
+    _permission: 'hockey full permission'
+
+# tournament info
+hockey_page.tournament__id__info:
+  path: 'tournament/{tournamentId}/info'
+  defaults:
+    _title: 'Информация'
+    _controller: '\Drupal\hockey_page\Controller\TournamentInfo::content'
+  requirements:
+    _permission: 'hockey full permission'
+
+# setting
+hockey_page.settings__settingName__tableInfo:
+  path: 'settings/{settingName}/tableInfo'
+  defaults:
+    _title: 'Таблица'
+    _controller: '\Drupal\hockey_page\Controller\SettingsTableInfo::content'
+  requirements:
+    _permission: 'hockey full permission'
+
+hockey_page.settings__settingName__jsonInfo:
+  path: 'settings/{settingName}/jsonInfo'
+  defaults:
+    _title: 'JSON'
+    _controller: '\Drupal\hockey_page\Controller\SettingsJsonInfo::content'
+  requirements:
+    _permission: 'hockey full permission'
+
+hockey_page.settings__settingName__editInfo:
+  path: 'settings/{settingName}/editInfo'
+  defaults:
+    _form: '\Drupal\hockey_page\Form\SettingsEditInfo'
+    _title: 'Редактировать'
+  requirements:
+    _permission: 'hockey full permission'
+
+# statistic
+hockey_page.statistic:
+  path: 'statistic/{statisticName}/info'
+  defaults:
+    _title: 'Статистика'
+    _controller: '\Drupal\hockey_page\Controller\Statistic::content'
+  requirements:
+    _permission: 'hockey full permission'
+
+hockey_page.api__getStatistic:
+  path: 'api/getStatistic'
+  defaults:
+    _title: 'api__getStatistic'
+    _controller: '\Drupal\hockey_page\Controller\ApiGetStatistic::content'
+  requirements:
+    _permission: 'hockey full permission'
