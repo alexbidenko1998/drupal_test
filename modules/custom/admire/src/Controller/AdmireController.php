@@ -6,8 +6,6 @@ use Drupal\Core\Controller\ControllerBase;
 class AdmireController extends ControllerBase {
 
     public function content() {
-        drupal_add_js('https://cdn.jsdelivr.net/npm/vue@2.6.11', 'external');
-
         return [
             'title' => 'Список мероприятий',
             'raw_markup' => [
