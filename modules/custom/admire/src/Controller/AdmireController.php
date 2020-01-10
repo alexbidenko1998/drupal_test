@@ -45,7 +45,7 @@ class AdmireController extends ControllerBase {
           <th scope="row">{{event.id}}</th>
           <td>{{event.name}}</td>
           <td>{{event.description}}</td>
-          <td><a :href="{{event.site}}">{{event.site}}</td>
+          <td><a :href="event.site">{{event.site}}</td>
         </tr>
       </tbody>
     </table>
