@@ -36,6 +36,7 @@ class AdmireController extends ControllerBase {
             ],
             '#attached' => [
                 'library' => [
+                    'admire/vue',
                     'admire/app',
                 ],
             ]

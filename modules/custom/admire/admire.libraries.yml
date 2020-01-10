@@ -1,5 +1,10 @@
-# библиотека для отображения json
 app:
   version: 1.x
   js:
     js/App.js: {}
+
+vue:
+  version: 1.x
+  header: true
+  js:
+    js/vue.js: {}
