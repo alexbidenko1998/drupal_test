@@ -6,41 +6,35 @@ use Drupal\Core\Controller\ControllerBase;
 class AdmireController extends ControllerBase {
 
     public function content() {
+        drupal_add_js('https://cdn.jsdelivr.net/npm/vue@2.6.11', 'external');
+
         return [
             'title' => 'Список мероприятий',
             'raw_markup' => [
                 '#type' => 'markup',
                 '#markup' =>
-'<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>'
+'
+<div id="App">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Название</th>
+          <th scope="col">Описание</th>
+          <th scope="col">Ссылка</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="event in events">
+          <th scope="row">{{event}}</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+'
             ]
         ];
     }
