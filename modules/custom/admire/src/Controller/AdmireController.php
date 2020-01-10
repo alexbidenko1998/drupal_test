@@ -32,18 +32,6 @@ class AdmireController extends ControllerBase {
       </tbody>
     </table>
 </div>
-
-<script type="text/javascript">
-alert();
-document.addEventListener(\'load\', () => {
-    const App = new Vue({
-        el: \'#App\',
-        data: {
-            events: [1, 2, 3]
-        }
-    });
-});
-</script>
 '
             ]
         ];
