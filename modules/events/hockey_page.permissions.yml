@@ -1,6 +1,0 @@
-hockey permission:
-  title: 'Hockey user information view'
-  restrict access: true
-hockey full permission:
-  title: 'Hockey information view'
-  restrict access: true
