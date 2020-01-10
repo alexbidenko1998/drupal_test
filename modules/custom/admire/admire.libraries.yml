@@ -1,7 +1,9 @@
 app:
-  version: 1.11
+  version: 1.12
   js:
     js/App.js: {}
+  dependencies:
+    - core/jquery
 
 vue:
   version: 1.x
