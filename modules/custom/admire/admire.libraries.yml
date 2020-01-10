@@ -1,5 +1,4 @@
 # библиотека для отображения json
 app:
-  version: 1.x
   js:
     js/App.js: {}
