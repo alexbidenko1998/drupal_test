@@ -1,0 +1,4 @@
+vuejs:
+  version: 1.x
+  js:
+    js/App.js: {}
