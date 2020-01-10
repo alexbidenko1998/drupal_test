@@ -11,9 +11,10 @@ class AdmireController extends ControllerBase {
             '#title' => 'Имя',
             '#v-model' => 'filterName'
         );
+        return $form;
         return [
             'title' => 'Список мероприятий',
-            'raw_markup' => [
+            'body' => [
                 '#prefix' => '<div id="App">',
                 '#sufix' => '</div>',
                 'search' => $form,
