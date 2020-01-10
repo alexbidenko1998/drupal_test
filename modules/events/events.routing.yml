@@ -12,7 +12,7 @@
 #     _permission: 'access simple page'
 
 # user list page
-hockey_page.user_list:
+events:
   path: '/events/list'
   defaults:
     _title: 'Список мероприятий'
