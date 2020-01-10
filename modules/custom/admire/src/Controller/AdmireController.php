@@ -6,7 +6,11 @@ use Drupal\Core\Controller\ControllerBase;
 class AdmireController extends ControllerBase {
 
     public function content() {
-        return ['html_page' => '<table class="table">
+        return [
+            'admire/custom' => [
+                'title' => 'Список мероприятий',
+                'page callback' =>
+'<table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -35,6 +39,8 @@ class AdmireController extends ControllerBase {
       <td>@twitter</td>
     </tr>
   </tbody>
-</table>'];
+</table>'
+            ]
+        ];
     }
 }
