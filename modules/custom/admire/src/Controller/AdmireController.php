@@ -12,7 +12,6 @@ class AdmireController extends ControllerBase {
             '#name' => 'filterName',
             '#attributes' => array('v-model' => 'filterName')
         );
-        return $form;
         return [
             'title' => 'Список мероприятий',
             'body' => [
