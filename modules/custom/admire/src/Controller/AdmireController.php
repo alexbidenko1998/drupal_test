@@ -12,6 +12,11 @@ class AdmireController extends ControllerBase {
             '#name' => 'filterName',
             '#attributes' => array('v-model' => 'filterName')
         );
+        $form['submit'] = array(
+            '#type' => 'button',
+            '#name' => 'Обновить',
+            '#attributes' => array('@click' => 'update')
+        );
         return [
             'title' => 'Список мероприятий',
             'body' => [
@@ -22,24 +27,6 @@ class AdmireController extends ControllerBase {
                     '#type' => 'markup',
                     '#markup' =>
 '
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-4">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <p :is="label" class="btn btn-secondary active">
-                <img :is="input" type="radio" name="options" value="id" id="option1" v-model="sorting"> Id
-              </p>
-              <p :is="label" class="btn btn-secondary">
-                <img :is="input" type="radio" name="options" value="name" id="option2" v-model="sorting"> Name
-              </p>
-              <p :is="label" class="btn btn-secondary">
-                <img :is="input" type="radio" name="options" value="description" id="option3" v-model="sorting"> Description
-              </p>
-            </div>
-        </div>
-    </div>
-</div>
-
 <table class="table">
   <thead>
     <tr>
@@ -58,6 +45,14 @@ class AdmireController extends ControllerBase {
     </tr>
   </tbody>
 </table>
+
+<div class="modal fade bd-example-modal-sm" id="success" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      Обновление успешно завершено
+    </div>
+  </div>
+</div>
 '
                 ]
             ],

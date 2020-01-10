@@ -1,5 +1,5 @@
 app:
-  version: 1.9
+  version: 1.10
   js:
     js/App.js: {}
 
