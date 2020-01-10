@@ -24,10 +24,10 @@ class AdmireController extends ControllerBase {
       </thead>
       <tbody>
         <tr v-for="event in events">
-          <th scope="row">{{event}}</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <th scope="row">{{event.id}}</th>
+          <td>{{event.name}}</td>
+          <td>{{event.description}}</td>
+          <td><a :href="{{event.site}}">{{event.site}}</td>
         </tr>
       </tbody>
     </table>
