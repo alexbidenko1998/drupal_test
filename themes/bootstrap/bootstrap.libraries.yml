@@ -1,7 +1,3 @@
-vuejs:
-  js:
-    https://cdn:jsdelivr:net/npm/vue@2:6:11: {}
-
 attributes:
   js:
     js/attributes.js: {}

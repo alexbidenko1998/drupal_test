@@ -32,7 +32,12 @@ class AdmireController extends ControllerBase {
       </tbody>
     </table>
 </div>
-'
+',
+            ],
+            '#attached' => [
+                'library' => [
+                    'admire/app',
+                ],
             ]
         ];
     }
