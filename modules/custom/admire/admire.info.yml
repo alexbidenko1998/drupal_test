@@ -3,3 +3,6 @@ description: 'Show admire data'
 package: Custom
 type: module
 core: 8.x
+
+libraries:
+  - admire/app
