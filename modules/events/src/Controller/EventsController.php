@@ -6,7 +6,7 @@ use Drupal\Core\Controller\ControllerBase;
 class EventsController extends ControllerBase {
 
     public function content() {
-        return '<table class="table">
+        return ['#title' => 'sljnsjkd']/*'<table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -35,6 +35,6 @@ class EventsController extends ControllerBase {
       <td>@twitter</td>
     </tr>
   </tbody>
-</table>';
+</table>'*/;
     }
 }
