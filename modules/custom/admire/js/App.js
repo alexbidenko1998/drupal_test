@@ -2,6 +2,7 @@ const App = new Vue({
     el: '#App',
     data: {
         sorting: 'id',
+        filterName: '',
         events: []
     },
     created() {
@@ -13,7 +14,9 @@ const App = new Vue({
     },
     computed: {
         filteredEvents() {
-            return this.events.sort((a, b) => {
+            return this.events.filter(el => {
+                return el.name.indexOf(this.filterName) > -1;
+            }).sort((a, b) => {
                 if(a[this.sortin] > b[this.sortin]) return 1;
                 else return -1;
             });
