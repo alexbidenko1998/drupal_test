@@ -1,8 +1,9 @@
 <?php
 
 namespace Drupal\events\Controller;
+use Drupal\Core\Controller\ControllerBase;
 
-class EventsController {
+class EventsController extends ControllerBase {
 
     public function content() {
         return '<table class="table">
