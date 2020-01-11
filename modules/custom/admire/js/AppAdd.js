@@ -24,6 +24,8 @@ const AppAdd = new Vue({
                     this.isPaid = data.isPaid;
                     this.price = data.price;
                     this.previewImage = `<img class="w-100" src="https://admire.social/drupal/test/preview/${this.preview}">`;
+
+                    this.videoData = data;
                 });
         }
     },
