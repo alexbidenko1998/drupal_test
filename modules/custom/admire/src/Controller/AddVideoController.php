@@ -63,7 +63,7 @@ class AddVideoController extends ControllerBase {
         return [
             'title' => 'Добавить видео',
             'body' => [
-                '#prefix' => '<div id="AppAdd">',
+                '#prefix' => '<div id="AppAdd" class="pb-5">',
                 '#sufix' => '</div>',
                 'addForm' => $form,
                 'preview' => [

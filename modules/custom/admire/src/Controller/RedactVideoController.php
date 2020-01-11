@@ -13,7 +13,8 @@ class RedactVideoController extends ControllerBase {
             '#attributes' => array(
                 '@click' => 'delete',
                 'v-if' => 'id > 0'
-            )
+            ),
+            '#submit' => ['delete']
         );
         $form['title'] = array(
             '#type' => 'textfield',
@@ -66,12 +67,13 @@ class RedactVideoController extends ControllerBase {
             '#attributes' => array(
                 '@click' => 'submit',
                 ':disabled' => 'isDisabled'
-            )
+            ),
+            '#submit' => ['submit']
         );
         return [
             'title' => 'Редактировать видео',
             'body' => [
-                '#prefix' => '<div id="AppAdd" v-show="videoData" video-id="' . $videoId . '">',
+                '#prefix' => '<div id="AppAdd" class="pb-5" v-show="videoData" video-id="' . $videoId . '">',
                 '#sufix' => '</div>',
                 'addForm' => $form,
                 'preview' => [
