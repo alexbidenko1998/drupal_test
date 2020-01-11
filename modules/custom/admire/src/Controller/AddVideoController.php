@@ -29,10 +29,9 @@ class AddVideoController extends ControllerBase {
             '#type' => 'number',
             '#title' => 'Цена',
             '#name' => 'price',
-            '#prefix' => '<div v-show="isPaid">',
-            '#sufix' => '</div>',
             '#attributes' => array(
-                'v-model' => 'price'
+                'v-model' => 'price',
+                ':disabled' => 'isPaid'
             )
         );
         $form['video'] = array(
