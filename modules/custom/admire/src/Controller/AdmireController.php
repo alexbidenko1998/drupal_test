@@ -18,12 +18,11 @@ class AdmireController extends ControllerBase {
             'body' => [
                 '#prefix' => '<div id="AppList" class="d-none">',
                 '#sufix' => '</div>',
+                'search' => $form,
                 'table' => [
                     '#type' => 'markup',
                     '#markup' =>
 '
-<a class="btn btn-info btn-block" href="add">Добавить видео</a>
-
 <table class="table">
   <thead>
     <tr>
