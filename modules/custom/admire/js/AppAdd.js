@@ -11,7 +11,8 @@ const AppAdd = new Vue({
         preview: null,
 
         previewImage: null,
-        deleteButton: ''
+        deleteButton: '',
+        videoLink: ''
     },
     created() {
         let videoId = document.getElementById('AppAdd').attributes['video-id'];
@@ -24,7 +25,8 @@ const AppAdd = new Vue({
                     this.description = data.description;
                     this.isPaid = data.isPaid === 1;
                     this.price = data.price;
-                    this.previewImage = `<img class="w-100" style="max-width: 300px;" src="https://admire.social/drupal/test/preview/${data.preview}">`;
+                    this.previewImage = `<img class="w-100 my-3" style="max-width: 300px;" src="https://admire.social/drupal/test/preview/${data.preview}">`;
+                    this.videoLink = `<a href="https://admire.social/drupal/test/video/${this.video}">Посмотреть видео</a>`;
 
                     this.videoData = data;
 

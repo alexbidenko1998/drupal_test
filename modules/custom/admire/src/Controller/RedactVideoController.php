@@ -66,6 +66,13 @@ class RedactVideoController extends ControllerBase {
 '
                 ],
                 'addForm' => $form,
+                'videoLink' => [
+                    '#type' => 'markup',
+                    '#markup' =>
+                        '
+<div v-if="videoData != null && videoData.video == video" v-html="videoLink"></div>
+'
+                ],
                 'preview' => [
                     '#type' => 'markup',
                     '#markup' =>
