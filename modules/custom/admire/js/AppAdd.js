@@ -6,7 +6,9 @@ const AppAdd = new Vue({
         isPaid: false,
         price: 0,
         video: null,
-        preview: null
+        preview: null,
+
+        previewImage: null
     },
     computed: {
         isDisabled() {
@@ -15,16 +17,25 @@ const AppAdd = new Vue({
     },
     methods: {
         addVideo() {
-            const files = e.target.files || e.dataTransfer.files;
+            const files = document.getElementById('inputVideo').files;
             if (!files.length)
                 return;
             this.video = files[0];
         },
         addPreview() {
-            const files = e.target.files || e.dataTransfer.files;
+            const files = document.getElementById('inputPreview').files;
             if (!files.length)
                 return;
             this.preview = files[0];
+
+            const image = new Image();
+            const reader = new FileReader();
+            const vm = this;
+
+            reader.onload = (e) => {
+                vm.previewImage = e.target.result;
+            };
+            reader.readAsDataURL(this.preview);
         },
         submit() {
             const form = new FormData();

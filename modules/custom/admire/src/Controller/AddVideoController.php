@@ -29,9 +29,10 @@ class AddVideoController extends ControllerBase {
             '#type' => 'number',
             '#title' => 'Цена',
             '#name' => 'price',
+            '#prefix' => '<div v-show="isPaid">',
+            '#sufix' => '</div>',
             '#attributes' => array(
-                'v-model' => 'price',
-                'v-show' => 'isPaid'
+                'v-model' => 'price'
             )
         );
         $form['video'] = array(
@@ -44,13 +45,19 @@ class AddVideoController extends ControllerBase {
             '#type' => 'file',
             '#title' => 'Загрузите превью',
             '#name' => 'preview',
-            '#attributes' => array('@change' => 'addVideo')
+            '#attributes' => array(
+                '@change' => 'addVideo',
+                'id' => 'inputVideo'
+            )
         );
         $form['preview'] = array(
             '#type' => 'file',
             '#title' => 'Загрузите превью',
             '#name' => 'preview',
-            '#attributes' => array('@change' => 'addPreview')
+            '#attributes' => array(
+                '@change' => 'addPreview',
+                'id' => 'inputPreview'
+            )
         );
         $form['submit'] = array(
             '#type' => 'button',
@@ -66,6 +73,15 @@ class AddVideoController extends ControllerBase {
                 '#prefix' => '<div id="AppAdd">',
                 '#sufix' => '</div>',
                 'addForm' => $form,
+                'preview' => [
+                    '#type' => 'markup',
+                    '#markup' =>
+                        '
+<div v-if="previewImage != null">
+    <img :src="previewImage" class="w-100">
+</div>
+'
+                ]
             ],
             '#attached' => [
                 'library' => [
