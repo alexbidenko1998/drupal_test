@@ -69,7 +69,7 @@ class AddVideoController extends ControllerBase {
                     '#type' => 'markup',
                     '#markup' =>
                         '
-<a class="btn btn-info" href="/video/list">Отмена</a>
+<a class="btn btn-info" href="/videos/list">Отмена</a>
 '
                 ],
                 'addForm' => $form,

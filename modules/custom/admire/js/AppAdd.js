@@ -81,7 +81,7 @@ const AppAdd = new Vue({
                 .then(data => {
                     console.log(data);
                     alert('Видео успешно добавлено');
-                    window.location.assign('../list')
+                    window.location.assign('videos/list')
                 });
         },
         delete() {
@@ -91,7 +91,7 @@ const AppAdd = new Vue({
                 .then(data => {
                     console.log(data);
                     alert('Видео успешно удалено');
-                    window.location.assign('../list')
+                    window.location.assign('videos/list')
                 });
         }
     }
