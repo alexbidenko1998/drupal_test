@@ -53,14 +53,6 @@ class AddVideoController extends ControllerBase {
                 'accept' => 'image/*'
             )
         );
-        $form['submit'] = array(
-            '#type' => 'button',
-            '#title' => 'Сохранить',
-            '#attributes' => array(
-                '@click' => 'submit',
-                ':disabled' => 'isDisabled'
-            )
-        );
         return [
             'title' => 'Добавить видео',
             'body' => [
@@ -82,7 +74,15 @@ class AddVideoController extends ControllerBase {
     <div v-html="previewImage" class="w-100"></div>
 </div>
 '
-                ]
+                ],
+                'submitForm' => array(
+                    '#type' => 'button',
+                    '#title' => 'Сохранить',
+                    '#attributes' => array(
+                        '@click' => 'submit',
+                        ':disabled' => 'isDisabled'
+                    )
+                )
             ],
             '#attached' => [
                 'library' => [
