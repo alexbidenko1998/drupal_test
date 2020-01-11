@@ -10,7 +10,8 @@ const AppAdd = new Vue({
         video: null,
         preview: null,
 
-        previewImage: null
+        previewImage: null,
+        deleteButton: ''
     },
     created() {
         let videoId = document.getElementById('AppAdd').attributes['video-id'];
@@ -27,6 +28,7 @@ const AppAdd = new Vue({
 
                     this.videoData = data;
                 });
+            this.deleteButton = `<button class="btn btn-warning" @click="delete">Удалить</button>`;
         }
     },
     computed: {
