@@ -26,7 +26,7 @@ class AddVideoController extends ControllerBase {
             '#attributes' => array('v-model' => 'isPaid')
         );
         $form['price'] = array(
-            '#type' => 'checkbox',
+            '#type' => 'number',
             '#title' => 'Цена',
             '#name' => 'price',
             '#attributes' => array(
