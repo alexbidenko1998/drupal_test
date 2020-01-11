@@ -81,6 +81,7 @@ const AppAdd = new Vue({
                 .then(data => {
                     console.log(data);
                     alert('Видео успешно добавлено');
+                    window.location.assign('../list')
                 });
         },
         delete() {

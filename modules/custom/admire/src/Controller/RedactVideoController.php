@@ -58,6 +58,13 @@ class RedactVideoController extends ControllerBase {
                 '#prefix' => '<div id="AppAdd" class="pb-5 d-none" v-show="videoData" video-id="' . $videoId . '">
                     <div v-html="deleteButton"></div>',
                 '#sufix' => '</div>',
+                'back' => [
+                    '#type' => 'markup',
+                    '#markup' =>
+                        '
+<a class="btn btn-info" href="/video/list">Отмена</a>
+'
+                ],
                 'addForm' => $form,
                 'preview' => [
                     '#type' => 'markup',
