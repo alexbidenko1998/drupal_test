@@ -4,7 +4,7 @@ namespace Drupal\admire\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
-class AddVideoController extends ControllerBase {
+class RedactVideoController extends ControllerBase {
 
     public function content($videoId) {
         $form['delete'] = array(

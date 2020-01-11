@@ -18,6 +18,6 @@ admire.redact_video:
   path: '/videos/update/{videoId}'
   defaults:
     _title: 'Редактировать видео'
-    _controller: '\Drupal\admire\Controller\AddVideoController::content'
+    _controller: '\Drupal\admire\Controller\RedactVideoController::content'
   requirements:
     _permission: 'access content'
