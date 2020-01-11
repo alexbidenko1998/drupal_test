@@ -10,7 +10,7 @@ const AppList = new Vue({
             .then(response => response.json())
             .then(data => {
                 this.videos = data.map(el => {
-                    el.preview = 'https://admire.social/drupal/test/preview/' + el.preview;
+                    el.preview = `<img class="w-100" src="https://admire.social/drupal/test/preview/${el.preview}">`;
                     return el;
                 });
             });
