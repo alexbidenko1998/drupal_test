@@ -14,12 +14,12 @@ bootstrap:
     js/bootstrap.js: {}
 
 appList:
-  version: 1.8
+  version: 1.9
   js:
     js/AppList.js: {}
 
 appAdd:
-  version: 1.11
+  version: 1.12
   js:
     js/AppAdd.js: {}
 

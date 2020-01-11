@@ -23,6 +23,8 @@ class AdmireController extends ControllerBase {
                     '#type' => 'markup',
                     '#markup' =>
 '
+<a class="btn btn-info btn-block" href="add">Добавить видео</a>
+
 <table class="table">
   <thead>
     <tr>

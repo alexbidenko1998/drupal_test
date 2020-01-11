@@ -52,15 +52,6 @@ class RedactVideoController extends ControllerBase {
                 'id' => 'inputPreview'
             )
         );
-        $form['submitButton'] = array(
-            '#type' => 'button',
-            '#value' => 'Сохранить',
-            '#attributes' => array(
-                '@click' => 'submit',
-                ':disabled' => 'isDisabled'
-            ),
-            '#submit' => ['submit']
-        );
         return [
             'title' => 'Редактировать видео',
             'body' => [
@@ -76,7 +67,16 @@ class RedactVideoController extends ControllerBase {
     <div v-html="previewImage" class="w-100"></div>
 </div>
 '
-                ]
+                ],
+                'submitForm' => [
+                    '#type' => 'button',
+                    '#value' => 'Сохранить',
+                    '#attributes' => array(
+                        '@click' => 'submit',
+                        ':disabled' => 'isDisabled'
+                    ),
+                    '#submit' => ['submit']
+                ],
             ],
             '#attached' => [
                 'library' => [
