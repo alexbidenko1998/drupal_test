@@ -8,9 +8,9 @@ class RedactVideoController extends ControllerBase {
 
     public function content($videoId) {
         $form['delete'] = array(
-            '#type' => 'button',
-            '#title' => 'Удалить',
-            '#value' => 'delete',
+            '#prefix' => '<button type="button" v-if="id > 0" @click="delete">',
+            '#suffix' => '</button>',
+            '#markup' => '<span>Удалить</span>',
         );
         $form['title'] = array(
             '#type' => 'textfield',
