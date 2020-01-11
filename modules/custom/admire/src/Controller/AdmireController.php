@@ -16,8 +16,6 @@ class AdmireController extends ControllerBase {
         return [
             'title' => 'Список видео',
             'body' => [
-                '#prefix' => '<div id="AppList" class="d-none">',
-                '#sufix' => '</div>',
                 'search' => $form,
                 'table' => [
                     '#type' => 'markup',
@@ -51,6 +49,15 @@ class AdmireController extends ControllerBase {
 </table>
 '
                 ]
+            ],
+            '#attached' => [
+                'library' => [
+                    'admire/vue',
+                    'admire/jquery',
+                    'admire/popper',
+                    'admire/bootstrap',
+                    'admire/appList',
+                ],
             ]
         ];
     }
