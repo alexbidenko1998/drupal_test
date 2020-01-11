@@ -31,7 +31,7 @@ class RedactVideoController extends ControllerBase {
             '#name' => 'price',
             '#attributes' => array(
                 'v-model' => 'price',
-                ':disabled' => 'isPaid'
+                ':disabled' => '!isPaid'
             )
         );
         $form['video'] = array(
@@ -64,7 +64,7 @@ class RedactVideoController extends ControllerBase {
         return [
             'title' => 'Редактировать видео',
             'body' => [
-                '#prefix' => '<div id="AppAdd" class="pb-5" v-show="videoData" video-id="' . $videoId . '">
+                '#prefix' => '<div id="AppAdd" class="pb-5 d-none" v-show="videoData" video-id="' . $videoId . '">
                     <div v-html="deleteButton"></div>',
                 '#sufix' => '</div>',
                 'addForm' => $form,

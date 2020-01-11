@@ -14,6 +14,8 @@ const AppList = new Vue({
                     el.link = `<a href="update/${el.id}">Редактировать</a>`;
                     return el;
                 });
+
+                document.getElementById('AppAdd').classList.remove('d-none');
             });
     },
     computed: {

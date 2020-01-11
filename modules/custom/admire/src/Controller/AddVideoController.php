@@ -31,7 +31,7 @@ class AddVideoController extends ControllerBase {
             '#name' => 'price',
             '#attributes' => array(
                 'v-model' => 'price',
-                ':disabled' => 'isPaid'
+                ':disabled' => '!isPaid'
             )
         );
         $form['video'] = array(
@@ -63,7 +63,7 @@ class AddVideoController extends ControllerBase {
         return [
             'title' => 'Добавить видео',
             'body' => [
-                '#prefix' => '<div id="AppAdd" class="pb-5">',
+                '#prefix' => '<div id="AppAdd d-none" class="pb-5">',
                 '#sufix' => '</div>',
                 'addForm' => $form,
                 'preview' => [

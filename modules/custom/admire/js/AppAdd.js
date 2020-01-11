@@ -24,11 +24,13 @@ const AppAdd = new Vue({
                     this.description = data.description;
                     this.isPaid = data.isPaid === 1;
                     this.price = data.price;
-                    this.previewImage = `<img class="w-100" src="https://admire.social/drupal/test/preview/${data.preview}">`;
+                    this.previewImage = `<img class="w-100" style="max-width: 300px;" src="https://admire.social/drupal/test/preview/${data.preview}">`;
 
                     this.videoData = data;
+
+                    document.getElementById('AppAdd').classList.remove('d-none');
                 });
-            this.deleteButton = `<button class="btn btn-warning" @click="delete">Удалить</button>`;
+            this.deleteButton = `<button class="btn btn-warning btn-block" onclick="AppAdd.delete()">Удалить</button>`;
         }
     },
     computed: {
