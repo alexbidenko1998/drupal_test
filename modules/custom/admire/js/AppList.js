@@ -20,7 +20,7 @@ const AppList = new Vue({
     computed: {
         filteredVideos() {
             return this.videos.filter(el => {
-                return el.title.indexOf(this.filterTitle) > -1;
+                return el.title.toLowerCase().indexOf(this.filterTitle.toLowerCase()) > -1;
             }).sort((a, b) => {
                 if(a[this.sorting] > b[this.sorting]) return 1;
                 else return -1;
