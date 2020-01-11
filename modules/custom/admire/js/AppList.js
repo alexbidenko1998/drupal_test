@@ -9,7 +9,10 @@ const AppList = new Vue({
         fetch('https://admire.social/api/drupal/video')
             .then(response => response.json())
             .then(data => {
-                this.events = data;
+                this.videos = data.map(el => {
+                    el.preview = 'https://admire.social/drupal/test/preview/' + el.preview;
+                    return el;
+                });
             });
     },
     computed: {
