@@ -14,9 +14,8 @@ const AppList = new Vue({
                     el.link = `<a href="update/${el.id}">Редактировать</a>`;
                     return el;
                 });
-
-                document.getElementById('AppList').classList.remove('d-none');
             });
+        document.getElementById('AppList').classList.remove('d-none');
     },
     computed: {
         filteredVideos() {
