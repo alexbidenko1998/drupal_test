@@ -7,10 +7,13 @@ use Drupal\Core\Controller\ControllerBase;
 class RedactVideoController extends ControllerBase {
 
     public function content($videoId) {
-        $form['delete'] = array(
-            '#prefix' => '<button type="button" v-if="id > 0" @click="delete">',
-            '#suffix' => '</button>',
-            '#markup' => '<span>Удалить</span>',
+        $form['deleteButton'] = array(
+            '#type' => 'button',
+            '#title' => 'Удалить',
+            '#attributes' => array(
+                '@click' => 'delete',
+                'v-if' => 'id > 0'
+            )
         );
         $form['title'] = array(
             '#type' => 'textfield',
@@ -57,10 +60,9 @@ class RedactVideoController extends ControllerBase {
                 'id' => 'inputPreview'
             )
         );
-        $form['submit'] = array(
+        $form['submitButton'] = array(
             '#type' => 'button',
             '#title' => 'Сохранить',
-            '#value' => 'submit',
             '#attributes' => array(
                 '@click' => 'submit',
                 ':disabled' => 'isDisabled'
