@@ -11,7 +11,7 @@ const AppList = new Vue({
             .then(data => {
                 this.videos = data.map(el => {
                     el.preview = `<img class="w-100" src="https://admire.social/drupal/test/preview/${el.preview}">`;
-                    el.link = `<a hres="update/${el.id}">Редактировать</a>`;
+                    el.link = `<a href="update/${el.id}">Редактировать</a>`;
                     return el;
                 });
             });

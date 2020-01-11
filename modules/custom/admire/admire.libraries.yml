@@ -14,7 +14,7 @@ bootstrap:
     js/bootstrap.js: {}
 
 appList:
-  version: 1.4
+  version: 1.5
   js:
     js/AppList.js: {}
 
