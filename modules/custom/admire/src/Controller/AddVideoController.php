@@ -39,12 +39,6 @@ class AddVideoController extends ControllerBase {
             '#type' => 'file',
             '#title' => 'Загрузите видео',
             '#name' => 'video',
-            '#attributes' => array('v-model' => 'video')
-        );
-        $form['preview'] = array(
-            '#type' => 'file',
-            '#title' => 'Загрузите превью',
-            '#name' => 'preview',
             '#attributes' => array(
                 '@change' => 'addVideo',
                 'id' => 'inputVideo'
@@ -77,7 +71,7 @@ class AddVideoController extends ControllerBase {
                     '#type' => 'markup',
                     '#markup' =>
                         '
-<div v-if="previewImage != null">
+<div v-show="previewImage != null">
     <img :src="previewImage" class="w-100">
 </div>
 '

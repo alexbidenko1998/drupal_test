@@ -12,7 +12,7 @@ const AppAdd = new Vue({
     },
     computed: {
         isDisabled() {
-            return this.title && this.description && (!this.isPaid || this.price > 0) && this.video && this.preview;
+            return this.title && this.description && (!this.isPaid || +this.price > 0) && this.video && this.preview;
         }
     },
     methods: {
@@ -28,7 +28,6 @@ const AppAdd = new Vue({
                 return;
             this.preview = files[0];
 
-            const image = new Image();
             const reader = new FileReader();
             const vm = this;
 
