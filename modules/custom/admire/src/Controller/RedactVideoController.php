@@ -43,15 +43,6 @@ class RedactVideoController extends ControllerBase {
                 'id' => 'inputVideo'
             )
         );
-        $form['preview'] = array(
-            '#type' => 'file',
-            '#title' => 'Загрузите превью',
-            '#name' => 'preview',
-            '#attributes' => array(
-                '@change' => 'addPreview',
-                'id' => 'inputPreview'
-            )
-        );
         return [
             'title' => 'Редактировать видео',
             'body' => [
@@ -73,6 +64,15 @@ class RedactVideoController extends ControllerBase {
 <div v-if="videoData != null && video == null" v-html="videoLink"></div>
 '
                 ],
+                'inputPreview' => array(
+                    '#type' => 'file',
+                    '#title' => 'Загрузите превью',
+                    '#name' => 'preview',
+                    '#attributes' => array(
+                        '@change' => 'addPreview',
+                        'id' => 'inputPreview'
+                    )
+                ),
                 'preview' => [
                     '#type' => 'markup',
                     '#markup' =>

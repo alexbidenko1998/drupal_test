@@ -26,9 +26,9 @@ const AppAdd = new Vue({
                     this.isPaid = data.isPaid === 1;
                     this.price = data.price;
                     this.previewImage = `<img class="w-100 my-3" style="max-width: 300px;" src="https://admire.social/drupal/test/preview/${data.preview}">`;
-                    this.videoLink = `<a href="https://admire.social/drupal/test/video/${this.video}">Посмотреть видео</a>`;
 
                     this.videoData = data;
+                    this.videoLink = `<a href="https://admire.social/drupal/test/video/${this.videoData.video}">Посмотреть видео</a>`;
 
                     document.getElementById('AppAdd').classList.remove('d-none');
                 });
