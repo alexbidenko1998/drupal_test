@@ -70,7 +70,7 @@ class RedactVideoController extends ControllerBase {
                     '#type' => 'markup',
                     '#markup' =>
                         '
-<div v-if="videoData != null && videoData.video == video" v-html="videoLink"></div>
+<div v-if="videoData != null && video == null" v-html="videoLink"></div>
 '
                 ],
                 'preview' => [
