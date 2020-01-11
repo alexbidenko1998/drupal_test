@@ -31,6 +31,8 @@ const AppAdd = new Vue({
                     document.getElementById('AppAdd').classList.remove('d-none');
                 });
             this.deleteButton = `<button class="btn btn-warning btn-block" onclick="AppAdd.delete()">Удалить</button>`;
+        } else {
+            document.getElementById('AppAdd').classList.remove('d-none');
         }
     },
     computed: {
