@@ -44,13 +44,13 @@ class AddVideoController extends ControllerBase {
             '#type' => 'file',
             '#title' => 'Загрузите превью',
             '#name' => 'preview',
-            '#attributes' => array('@change' => 'addVideo(this)')
+            '#attributes' => array('@change' => 'addVideo')
         );
         $form['preview'] = array(
             '#type' => 'file',
             '#title' => 'Загрузите превью',
             '#name' => 'preview',
-            '#attributes' => array('@change' => 'addPreview(this)')
+            '#attributes' => array('@change' => 'addPreview')
         );
         $form['submit'] = array(
             '#type' => 'button',

@@ -14,15 +14,17 @@ const AppAdd = new Vue({
         }
     },
     methods: {
-        addVideo(event) {
-            if(event.target.files.length > 0) {
-                this.video = event.target.files[0];
-            }
+        addVideo() {
+            const files = e.target.files || e.dataTransfer.files;
+            if (!files.length)
+                return;
+            this.video = files[0];
         },
-        addPreview(event) {
-            if(event.target.files.length > 0) {
-                this.preview = event.target.files[0];
-            }
+        addPreview() {
+            const files = e.target.files || e.dataTransfer.files;
+            if (!files.length)
+                return;
+            this.preview = files[0];
         },
         submit() {
             const form = new FormData();
@@ -35,8 +37,9 @@ const AppAdd = new Vue({
             fetch('https://admire.social/api/drupal/video', {
                 method: 'POST',
                 body: form
-            }).then(response => response.json())
+            }).then(response => response.text())
                 .then(data => {
+                    console.log(data);
                     alert('Видео успешно добавлено');
                 });
         }
