@@ -70,7 +70,8 @@ class RedactVideoController extends ControllerBase {
                     '#name' => 'preview',
                     '#attributes' => array(
                         '@change' => 'addPreview',
-                        'id' => 'inputPreview'
+                        'id' => 'inputPreview',
+                        'accept' => 'image/*'
                     )
                 ),
                 'preview' => [

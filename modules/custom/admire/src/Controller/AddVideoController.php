@@ -49,7 +49,8 @@ class AddVideoController extends ControllerBase {
             '#name' => 'preview',
             '#attributes' => array(
                 '@change' => 'addPreview',
-                'id' => 'inputPreview'
+                'id' => 'inputPreview',
+                'accept' => 'image/*'
             )
         );
         $form['submit'] = array(

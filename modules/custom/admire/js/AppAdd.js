@@ -28,7 +28,7 @@ const AppAdd = new Vue({
                     this.previewImage = `<img class="w-100 my-3" style="max-width: 300px;" src="https://admire.social/drupal/test/preview/${data.preview}">`;
 
                     this.videoData = data;
-                    this.videoLink = `<a href="https://admire.social/drupal/test/video/${this.videoData.video}">Посмотреть видео</a>`;
+                    this.videoLink = `<a href="https://admire.social/drupal/test/video/${this.videoData.video}" target="_blank">Посмотреть видео</a>`;
 
                     document.getElementById('AppAdd').classList.remove('d-none');
                 });
