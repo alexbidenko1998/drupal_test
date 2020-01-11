@@ -10,15 +10,19 @@ const AppAdd = new Vue({
     },
     computed: {
         isDisabled() {
-            return this.title && this.description && (!this.isPaid || this.price) && this.video && this.preview;
+            return this.title && this.description && (!this.isPaid || this.price > 0) && this.video && this.preview;
         }
     },
     methods: {
         addVideo(event) {
-            this.video = event.target.file;
+            if(event.target.files.length > 0) {
+                this.video = event.target.files[0];
+            }
         },
         addPreview(event) {
-            this.preview = event.target.file;
+            if(event.target.files.length > 0) {
+                this.preview = event.target.files[0];
+            }
         },
         submit() {
             const form = new FormData();
