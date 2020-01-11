@@ -15,7 +15,7 @@ const AppList = new Vue({
                     return el;
                 });
 
-                document.getElementById('AppAdd').classList.remove('d-none');
+                document.getElementById('AppList').classList.remove('d-none');
             });
     },
     computed: {
