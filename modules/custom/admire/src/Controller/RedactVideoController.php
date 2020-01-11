@@ -10,6 +10,11 @@ class RedactVideoController extends ControllerBase {
         $form['delete'] = array(
             '#type' => 'button',
             '#title' => 'Удалить',
+            '#value' => 'delete',
+            '#attributes' => array(
+                'v-if' => 'id > 0',
+                '@click' => 'delete'
+            )
         );
         $form['title'] = array(
             '#type' => 'textfield',
@@ -59,6 +64,7 @@ class RedactVideoController extends ControllerBase {
         $form['submit'] = array(
             '#type' => 'button',
             '#title' => 'Сохранить',
+            '#value' => 'submit',
             '#attributes' => array(
                 '@click' => 'submit',
                 ':disabled' => 'isDisabled'
