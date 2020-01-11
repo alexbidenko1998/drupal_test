@@ -21,9 +21,9 @@ const AppAdd = new Vue({
                 .then(data => {
                     this.title = data.title;
                     this.description = data.description;
-                    this.isPaid = data.isPaid;
+                    this.isPaid = data.isPaid === 1;
                     this.price = data.price;
-                    this.previewImage = `<img class="w-100" src="https://admire.social/drupal/test/preview/${this.preview}">`;
+                    this.previewImage = `<img class="w-100" src="https://admire.social/drupal/test/preview/${data.preview}">`;
 
                     this.videoData = data;
                 });

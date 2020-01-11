@@ -19,7 +19,7 @@ appList:
     js/AppList.js: {}
 
 appAdd:
-  version: 1.7
+  version: 1.8
   js:
     js/AppAdd.js: {}
 
