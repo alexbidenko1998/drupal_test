@@ -13,3 +13,11 @@ admire.add_video:
     _controller: '\Drupal\admire\Controller\AddVideoController::content'
   requirements:
     _permission: 'access content'
+
+admire.redact_video:
+  path: '/videos/update/{videoId}'
+  defaults:
+    _title: 'Редактировать видео'
+    _controller: '\Drupal\admire\Controller\AddVideoController::content'
+  requirements:
+    _permission: 'access content'

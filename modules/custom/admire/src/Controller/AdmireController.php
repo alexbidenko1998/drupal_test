@@ -30,6 +30,7 @@ class AdmireController extends ControllerBase {
       <th scope="col">Название</th>
       <th scope="col">Описание</th>
       <th scope="col">Превью</th>
+      <th scope="col">Изменить</th>
     </tr>
   </thead>
   <tbody>
@@ -39,7 +40,10 @@ class AdmireController extends ControllerBase {
       <td>{{video.description}}</td>
       <td>
         <div class="w-100" v-html="video.preview"></div>
-       </td>
+      </td>
+      <td>
+        <div class="w-100" v-html="video.link"></div>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -1,6 +1,8 @@
 const AppAdd = new Vue({
     el: '#AppAdd',
     data: {
+        id: 0,
+        videoData: null,
         title: '',
         description: '',
         isPaid: false,
@@ -10,9 +12,25 @@ const AppAdd = new Vue({
 
         previewImage: null
     },
+    created() {
+        let videoId = document.getElementById('AppAdd').attributes['video-id'];
+        if(!!videoId) {
+            this.id = +videoId.value;
+            fetch('https://admire.social/api/drupal/video/' + this.id)
+                .then(response => response.json())
+                .then(data => {
+                    this.title = data.title;
+                    this.description = data.description;
+                    this.isPaid = data.isPaid;
+                    this.price = data.price;
+                    this.previewImage = `<img class="w-100" src="https://admire.social/drupal/test/preview/${this.preview}">`;
+                });
+        }
+    },
     computed: {
         isDisabled() {
-            return this.title && this.description && (!this.isPaid || +this.price > 0) && this.video && this.preview;
+            return !(this.title && this.description && (!this.isPaid || +this.price > 0) && this.video && this.preview
+                || this.id > 0) ;
         }
     },
     methods: {
@@ -32,7 +50,7 @@ const AppAdd = new Vue({
             const vm = this;
 
             reader.onload = (e) => {
-                vm.previewImage = e.target.result;
+                vm.previewImage = `<img src="${e.target.result}" class="w-100">`;
             };
             reader.readAsDataURL(this.preview);
         },
@@ -42,15 +60,29 @@ const AppAdd = new Vue({
             form.append('description', this.description);
             form.append('isPaid', this.isPaid);
             form.append('price', this.price);
-            form.append('video', this.video);
-            form.append('preview', this.preview);
-            fetch('https://admire.social/api/drupal/video', {
+            if(this.video != null) {
+                form.append('video', this.video);
+            }
+            if(this.preview != null) {
+                form.append('preview', this.preview);
+            }
+            fetch('https://admire.social/api/drupal/video' + (this.id > 0 ? '/' + this.id : ''), {
                 method: 'POST',
                 body: form
             }).then(response => response.text())
                 .then(data => {
                     console.log(data);
                     alert('Видео успешно добавлено');
+                });
+        },
+        delete() {
+            fetch('https://admire.social/api/drupal/video/' + this.id, {
+                method: 'DELETE'
+            }).then(response => response.text())
+                .then(data => {
+                    console.log(data);
+                    alert('Видео успешно удалено');
+                    window.location.assign('../list')
                 });
         }
     }

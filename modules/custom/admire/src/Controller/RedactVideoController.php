@@ -6,7 +6,15 @@ use Drupal\Core\Controller\ControllerBase;
 
 class AddVideoController extends ControllerBase {
 
-    public function content() {
+    public function content($videoId) {
+        $form['delete'] = array(
+            '#type' => 'button',
+            '#title' => 'Удалить',
+            '#attributes' => array(
+                'v-if' => 'id > 0',
+                '@click' => 'delete'
+            )
+        );
         $form['title'] = array(
             '#type' => 'textfield',
             '#title' => 'Название',
@@ -63,7 +71,7 @@ class AddVideoController extends ControllerBase {
         return [
             'title' => 'Добавить видео',
             'body' => [
-                '#prefix' => '<div id="AppAdd">',
+                '#prefix' => '<div id="AppAdd" v-if="videoData != null" video-id="' . $videoId . '">',
                 '#sufix' => '</div>',
                 'addForm' => $form,
                 'preview' => [
