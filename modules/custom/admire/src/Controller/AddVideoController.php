@@ -65,6 +65,13 @@ class AddVideoController extends ControllerBase {
             'body' => [
                 '#prefix' => '<div id="AppAdd" class="pb-5 d-none">',
                 '#sufix' => '</div>',
+                'back' => [
+                    '#type' => 'markup',
+                    '#markup' =>
+                        '
+<a class="btn btn-info" href="/video/list">Отмена</a>
+'
+                ],
                 'addForm' => $form,
                 'preview' => [
                     '#type' => 'markup',
