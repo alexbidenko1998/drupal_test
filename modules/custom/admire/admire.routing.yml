@@ -1,7 +1,15 @@
-admire.events_list:
-  path: '/events/list'
+admire.videos_list:
+  path: '/videos/list'
   defaults:
-    _title: 'Список мероприятий'
+    _title: 'Список видео'
     _controller: '\Drupal\admire\Controller\AdmireController::content'
+  requirements:
+    _permission: 'access content'
+
+admire.add_video:
+  path: '/videos/add'
+  defaults:
+    _title: 'Добавить видео'
+    _controller: '\Drupal\admire\Controller\AddVideoController::content'
   requirements:
     _permission: 'access content'

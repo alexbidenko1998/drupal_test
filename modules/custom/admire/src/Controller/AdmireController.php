@@ -1,6 +1,7 @@
 <?php
 
 namespace Drupal\admire\Controller;
+
 use Drupal\Core\Controller\ControllerBase;
 
 class AdmireController extends ControllerBase {
@@ -8,19 +9,14 @@ class AdmireController extends ControllerBase {
     public function content() {
         $form['search'] = array(
             '#type' => 'textfield',
-            '#title' => 'Имя',
-            '#name' => 'filterName',
-            '#attributes' => array('v-model' => 'filterName')
-        );
-        $form['submit'] = array(
-            '#type' => 'button',
-            '#name' => 'Обновить',
-            '#attributes' => array('@click' => 'update')
+            '#title' => 'Название',
+            '#name' => 'filterTitle',
+            '#attributes' => array('v-model' => 'filterTitle')
         );
         return [
-            'title' => 'Список мероприятий',
+            'title' => 'Список видео',
             'body' => [
-                '#prefix' => '<div id="App">',
+                '#prefix' => '<div id="AppList">',
                 '#sufix' => '</div>',
                 'search' => $form,
                 'table' => [
@@ -33,33 +29,30 @@ class AdmireController extends ControllerBase {
       <th scope="col">Id</th>
       <th scope="col">Название</th>
       <th scope="col">Описание</th>
-      <th scope="col">Ссылка</th>
+      <th scope="col">Превью</th>
     </tr>
   </thead>
   <tbody>
-    <tr v-for="event in filteredEvents">
-      <th scope="row">{{event.id}}</th>
-      <td>{{event.name}}</td>
-      <td>{{event.description}}</td>
-      <td><a :href="event.site">{{event.site}}</td>
+    <tr v-for="video in filteredVideos">
+      <th scope="row">{{video.id}}</th>
+      <td>{{video.title}}</td>
+      <td>{{video.description}}</td>
+      <td>
+        <img class="w-100" :src="video.preview">
+       </td>
     </tr>
   </tbody>
 </table>
-
-<div class="modal fade bd-example-modal-sm" id="success" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      Обновление успешно завершено
-    </div>
-  </div>
-</div>
 '
                 ]
             ],
             '#attached' => [
                 'library' => [
                     'admire/vue',
-                    'admire/app',
+                    'admire/jquery',
+                    'admire/popper',
+                    'admire/bootstrap',
+                    'admire/appList',
                 ],
             ]
         ];

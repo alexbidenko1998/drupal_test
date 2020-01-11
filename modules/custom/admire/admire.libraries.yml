@@ -1,9 +1,27 @@
-app:
-  version: 1.12
+jquery:
+  version: 1.x
   js:
-    js/App.js: {}
-  dependencies:
-    - core/jquery
+    js/jquery.js: {}
+
+popper:
+  version: 1.x
+  js:
+    js/popper.js: {}
+
+bootstrap:
+  version: 1.x
+  js:
+    js/bootstrap.js: {}
+
+appList:
+  version: 1.1
+  js:
+    js/AppList.js: {}
+
+appAdd:
+  version: 1.1
+  js:
+    js/AppAdd.js: {}
 
 vue:
   version: 1.x
