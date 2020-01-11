@@ -19,15 +19,38 @@ class AdmireController extends ControllerBase {
                 '#prefix' => '<div id="AppList" class="d-none">',
                 '#sufix' => '</div>',
                 'search' => $form,
-            ],
-            '#attached' => [
-                'library' => [
-                    'admire/vue',
-                    'admire/jquery',
-                    'admire/popper',
-                    'admire/bootstrap',
-                    'admire/appList',
-                ],
+                'table' => [
+                    '#type' => 'markup',
+                    '#markup' =>
+'
+<a class="btn btn-info btn-block" href="add">Добавить видео</a>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Название</th>
+      <th scope="col">Описание</th>
+      <th scope="col">Превью</th>
+      <th scope="col">Изменить</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="video in filteredVideos">
+      <th scope="row">{{video.id}}</th>
+      <td>{{video.title}}</td>
+      <td>{{video.description}}</td>
+      <td>
+        <div class="w-100" v-html="video.preview"></div>
+      </td>
+      <td>
+        <div class="w-100" v-html="video.link"></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+'
+                ]
             ]
         ];
     }
