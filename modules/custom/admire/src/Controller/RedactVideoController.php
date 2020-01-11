@@ -69,9 +69,9 @@ class RedactVideoController extends ControllerBase {
             )
         );
         return [
-            'title' => 'Добавить видео',
+            'title' => 'Редактировать видео',
             'body' => [
-                '#prefix' => '<div id="AppAdd" v-show="videoData != null" video-id="' . $videoId . '">',
+                '#prefix' => '<div id="AppAdd" video-id="' . $videoId . '">',
                 '#sufix' => '</div>',
                 'addForm' => $form,
                 'preview' => [
