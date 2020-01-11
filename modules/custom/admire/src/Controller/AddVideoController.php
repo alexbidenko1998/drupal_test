@@ -72,7 +72,7 @@ class AddVideoController extends ControllerBase {
                     '#markup' =>
                         '
 <div v-show="previewImage != null">
-    <img :src="previewImage" class="w-100">
+    <img v-bind:src="previewImage" class="w-100">
 </div>
 '
                 ]

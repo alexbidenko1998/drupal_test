@@ -38,7 +38,7 @@ class AdmireController extends ControllerBase {
       <td>{{video.title}}</td>
       <td>{{video.description}}</td>
       <td>
-        <img class="w-100" :src="video.preview">
+        <img class="w-100" v-bind:src="video.preview">
        </td>
     </tr>
   </tbody>
