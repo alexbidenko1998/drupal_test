@@ -7,6 +7,13 @@ use Drupal\Core\Controller\ControllerBase;
 class RedactVideoController extends ControllerBase {
 
     public function content($videoId) {
+        $form['deleteB'] = array(
+            '#type' => 'button',
+            '#title' => 'Удалить',
+            '#attributes' => array(
+                '@click' => 'delete'
+            )
+        );
         $form['title'] = array(
             '#type' => 'textfield',
             '#title' => 'Название',
