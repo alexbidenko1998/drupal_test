@@ -16,9 +16,8 @@ class AdmireController extends ControllerBase {
         return [
             'title' => 'Список видео',
             'body' => [
-                '#prefix' => '<div id="AppLists" class="d-none">',
+                '#prefix' => '<div id="AppList" class="d-none">',
                 '#sufix' => '</div>',
-                'search' => $form,
                 'table' => [
                     '#type' => 'markup',
                     '#markup' =>
