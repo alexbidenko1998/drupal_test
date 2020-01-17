@@ -13,6 +13,9 @@ function kwg_page_theme() {
       'templates' => 'templates/kwg-page-app-user-list',
     ),
 
+
+
+
     'kwg_page_app_user_view' => array( // Название темы
       'variables' => array( // Массив названия перменных
         'data' => array(),
